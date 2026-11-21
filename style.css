@@ -14,7 +14,22 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+a {
+    transition: color 0.3s ease;
+}
 
+a:hover {
+    color: #527d56;
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
 /* Menší notebook – od 60em */
 @media (min-width: 60em) {
     body {
