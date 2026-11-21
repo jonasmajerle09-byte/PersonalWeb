@@ -14,7 +14,17 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
+.card {
+    background-color: rgb(255 255 255 / 70%);
+    backdrop-filter: blur(10px);
+}
+@media (prefers-reduced-transparency: reduce) {
+    .card {
+        background-color: #ffffff;
+        backdrop-filter: none;
+        opacity: 1;
+    }
+}
 /* Menší notebook – od 60em */
 @media (min-width: 60em) {
     body {
