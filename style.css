@@ -1,28 +1,38 @@
+/* Mobil – základní rozložení */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
 
-/* Tablet – od 40em */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Tablet */
 @media (min-width: 40em) {
-    body {
-        font-size: 1rem;
-    }
-
-    .container {
-        max-width: 60rem;
-        margin: 0 auto;
-    }
-
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
-/* Menší notebook – od 60em */
+/* Notebook */
 @media (min-width: 60em) {
-    body {
-        font-size: 1.05rem;
-    }
-
     .container {
         max-width: 75rem;
+        margin: 0 auto;
     }
 
     .gallery {
@@ -30,7 +40,7 @@
     }
 }
 
-/* Velké obrazovky – od 80em */
+/* Široký monitor */
 @media (min-width: 80em) {
     .container {
         max-width: 85rem;
@@ -38,80 +48,5 @@
 
     .gallery {
         grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* Tmavý režim */
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-        --background: #181818;
-        --text: #f1f1f1;
-        --surface: #292929;
-        --accent: #a5c99b;
-    }
-
-    body {
-        background-color: var(--background);
-        color: var(--text);
-    }
-
-    a {
-        color: var(--accent);
-    }
-}
-
-/* Zvýšený kontrast */
-@media (prefers-contrast: more) {
-    body {
-        color: #000;
-        background-color: #fff;
-    }
-
-    a {
-        color: #003399;
-        text-decoration: underline;
-    }
-
-    button {
-        border: 2px solid currentColor;
-    }
-}
-
-/* Omezení animací */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* Omezení průhlednosti */
-@media (prefers-reduced-transparency: reduce) {
-    *,
-    *::before,
-    *::after {
-        backdrop-filter: none !important;
-        opacity: 1;
-    }
-}
-
-/* Vynucené barvy – například vysoký kontrast ve Windows */
-@media (forced-colors: active) {
-    body {
-        color: CanvasText;
-        background-color: Canvas;
-    }
-
-    a {
-        color: LinkText;
-    }
-
-    button {
-        border: 1px solid ButtonText;
     }
 }
