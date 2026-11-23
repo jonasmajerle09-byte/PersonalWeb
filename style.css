@@ -4,6 +4,29 @@
     padding: 1rem;
 }
 
+<<<<<<< HEAD
+:root {
+    color-scheme: light;
+
+    --background: #f2f5f1;
+    --text: #26352d;
+    --surface: #ffffff;
+    --accent: #315c3b;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.card {
+    background-color: var(--surface);
+}
+
+a {
+    color: var(--accent);
+}
+=======
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -17,6 +40,7 @@ nav ul {
 }
 
 /* Tablet */
+>>>>>>> main
 @media (min-width: 40em) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
