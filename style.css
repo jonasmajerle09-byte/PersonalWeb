@@ -1,33 +1,52 @@
+/* Mobil – základní rozložení */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Tablet */
 @media (min-width: 40em) {
-  /* TODO */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
+/* Notebook */
 @media (min-width: 60em) {
-  /* TODO */
+    .container {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
+/* Široký monitor */
 @media (min-width: 80em) {
-  /* TODO */
-}
+    .container {
+        max-width: 85rem;
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* TODO */
-  }
-}
-
-@media (prefers-contrast: more) {
-  /* TODO */
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* TODO */
-}
-
-@media (prefers-reduced-transparency: reduce) {
-  /* TODO */
-}
-
-@media (forced-colors: active) {
-  /* TODO */
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
